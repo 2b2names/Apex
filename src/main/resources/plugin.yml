@@ -1,0 +1,15 @@
+name: Apex
+version: 1.0
+main: me.tiger.apex.Apex
+api-version: 1.21
+author: 2b2t_names
+
+commands:
+  apex:
+    description: Enable or disable the anti-cheat
+    usage: /apex enable|disable
+
+permissions:
+  apex.fly:
+    description: Allows flight without triggering anti-cheat
+    default: op
