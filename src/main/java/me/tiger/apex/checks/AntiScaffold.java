@@ -9,8 +9,9 @@ public class AntiScaffold extends Check {
     }
 
     @Override
-    public boolean run(Player player) {
+    protected boolean check(Player player) {
         // Placeholder: detect rapid unnatural block placing
+        // For now just return false until logic is added
         return false;
     }
 }
