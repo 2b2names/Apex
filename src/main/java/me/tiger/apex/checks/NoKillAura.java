@@ -9,9 +9,9 @@ public class NoKillAura extends Check {
     }
 
     @Override
-    public boolean run(Player player) {
-        // Placeholder: detect attacking too fast or impossible reach
-        // Can expand with attack event timestamps and distance
+    protected boolean check(Player player) {
+        // Placeholder: detect impossible attack speed or reach
+        // Currently just returns false until proper logic is added
         return false;
     }
 }

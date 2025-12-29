@@ -10,9 +10,10 @@ public class NoAntiKB extends Check {
     }
 
     @Override
-    public boolean run(Player player) {
+    protected boolean check(Player player) {
+        // Example: detect no knockback (velocity too small)
         Vector v = player.getVelocity();
-        if (v.length() < 0.01) { // Example: no knockback
+        if (v.length() < 0.01) {
             onViolation(player);
             return true;
         }
