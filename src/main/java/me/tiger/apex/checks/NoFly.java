@@ -10,7 +10,7 @@ public class NoFly extends Check {
     }
 
     @Override
-    public boolean run(Player player) {
+    protected boolean check(Player player) {
         if (player.isFlying() && !player.hasPermission("apex.fly")) {
             onViolation(player);
             return true;
@@ -20,6 +20,7 @@ public class NoFly extends Check {
 
     public void handleEvent(PlayerToggleFlightEvent event) {
         Player player = event.getPlayer();
-        if (run(player)) event.setCancelled(true);
+        if (player.isOp()) return; // Skip OPs
+        if (check(player)) event.setCancelled(true);
     }
 }

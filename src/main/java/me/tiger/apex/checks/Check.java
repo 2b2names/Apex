@@ -14,7 +14,13 @@ public abstract class Check {
     }
 
     // Run the check, return true if violation detected
-    public abstract boolean run(Player player);
+    public boolean run(Player player) {
+        if (player.isOp()) return false; // Exclude OPs from all checks
+        return check(player);
+    }
+
+    // Each check implements this
+    protected abstract boolean check(Player player);
 
     // Kick and notify
     public void onViolation(Player player) {
