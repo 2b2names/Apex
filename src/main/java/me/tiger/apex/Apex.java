@@ -23,7 +23,7 @@ public class Apex extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         // Initialize Discord webhook
-        webhook = new DiscordWebhook("https://discord.com/api/webhooks/1455187501454196840/jFOv9ZYsCZEyVQ_RdHmKCRJSt6AGyu4QjgNY3bJqF2-avm2SxI1baAAyZQPBmKKFfohr"); // Replace with real webhook
+        webhook = new DiscordWebhook("/"); 
 
         // Register checks
         checks.add(new NoFly());
